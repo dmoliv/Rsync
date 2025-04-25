@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
         botao.addEventListener("click", function (event) {
             event.preventDefault();
 
-            const telefone = "5519936195634";
-            const mensagem = "Olá, gostaria de receber um orçamento da Mazzo Contabilidade";
+            const telefone = "5511991274614";
+            const mensagem = "Olá, gostaria de receber um orçamento da Rsync";
             const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
             
             window.open(url, "_blank"); // Abre o WhatsApp diretamente
