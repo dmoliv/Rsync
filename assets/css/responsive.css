@@ -1,0 +1,443 @@
+/* RESPONSIVIDADE PARA CELULARES */ 
+
+/* Estilos básicos do header */
+header {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+
+/* Logo */
+.logo {
+    width: 10rem !important;
+    height: auto;
+    margin-left: -2rem;
+}
+
+/* Ocultar menu no mobile inicialmente */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+/* Menu hambúrguer */
+.menu-toggle {
+    display: none; /* Escondido em telas grandes */
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+
+/* Ajustes responsivos para telas menores */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostra o botão de menu */
+    }
+
+    .nav-menu {
+        display: none; /* Esconde o menu por padrão */
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        display: flex; /* Mostra o menu quando ativado */
+    }
+
+    .nav-menu li {
+        text-align: center;
+        padding: 0.75rem 0;
+    }
+}
+
+
+/* Ajuste para o conteúdo principal em telas menores */
+@media screen and (max-width: 768px) {
+    
+    header {
+        height: 5rem; /* Reduza esse valor conforme necessário */
+        padding: 0.5rem 1rem; /* Ajuste o espaçamento interno */
+    }
+
+    .logo {
+        width: 5rem; /* Reduz o tamanho do logo se necessário */
+    }
+
+    .menu-toggle {
+        position: absolute;
+        right: 1.5rem; /* Define a posição no canto direito */
+        top: 50%;
+        transform: translateY(-50%); /* Centraliza verticalmente */
+        font-size: 1.8rem; /* Ajusta o tamanho do ícone */
+        cursor: pointer;
+    }
+
+    .content {
+        width: 100%; /* Ajusta a largura para melhor visualização */
+        text-align: left; /* Centraliza o texto */
+        margin-top: 2rem; /* Reduz a margem superior */
+        padding: 1rem;
+    }
+
+    .content h1 {
+        font-size: 1.8rem; /* Reduz o tamanho do título */
+    }
+
+    .content h4 {
+        font-size: 1rem; /* Ajusta o tamanho do subtítulo */
+    }
+
+    .background-container {
+        height: 50vh; /* Ajusta a altura da imagem de fundo */
+        background-size: cover;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .content {
+        padding-top: 3rem; /* Ajuste o valor para descer mais ou menos */
+    }
+}
+
+/* Para telas menores que 480px (celulares pequenos) */
+@media screen and (max-width: 480px) {
+    .content {
+        width: 95%;
+        margin-top: 1rem;
+    }
+
+    .content h1 {
+        font-size: 1.5rem;
+    }
+
+    .content h4 {
+        font-size: 0.9rem;
+    }
+}
+
+/* Ajuste na seção de serviços para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .service-container {
+        flex-direction: column; /* Empilhar os serviços em coluna */
+        align-items: center; /* Centralizar os serviços */
+        gap: 1rem; /* Adicionar espaçamento entre os cards */
+    }
+
+    .service-box {
+        width: 90%; /* Aumentar a largura para ocupar mais espaço */
+        text-align: center; /* Centralizar o texto */
+        padding: 1rem;
+        margin-bottom: -1rem; /* Reduz o espaço entre os serviços */
+        overflow: hidden; 
+    }
+
+    .service-box h3 {
+        margin-top: 0rem; /* Remove margens que podem estar empurrando o título para fora */
+    }
+
+
+    .service-icon img {
+        width: 3rem; /* Reduzir os ícones para melhor ajuste */
+    }
+
+    .services h2 {
+        font-size: 1.8rem; /* Reduzindo o tamanho do título */
+    }
+}
+
+
+
+/* Ajuste para telas menores que 480px (celulares pequenos) */
+@media screen and (max-width: 480px) {
+    .service-box {
+        width: 100%; /* Ajustar para ocupar toda a largura da tela */
+        padding: 0.5rem;
+        margin-top: 2rem;
+    }
+
+    .services h2 {
+        font-size: 1.5rem;
+    }
+
+    .services h3 {
+        font-size: 1.2rem;
+        margin-top: -3rem;
+    }
+
+    .services h4 {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+
+/* Ajustes para a seção "middle" em telas menores */
+@media screen and (max-width: 1024px) {
+    .middle {
+        flex-direction: column; /* Empilha os elementos */
+        text-align: center; /* Centraliza o conteúdo */
+        padding: 2rem 1rem; /* Reduz padding para telas menores */
+    }
+
+    .middle-content {
+        flex-direction: column;
+        gap: 1.5rem; /* Ajusta o espaçamento entre elementos */
+    }
+
+    .middle-text {
+        max-width: 90%; /* Mantém o texto dentro da tela */
+        margin: 0 auto;
+    }
+
+    .middle-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .middle-text h4 {
+        font-size: 1rem;
+    }
+
+    .middle-image img {
+        width: 100%; /* Faz a imagem ocupar toda a largura */
+        max-width: 350px; /* Limita o tamanho em telas grandes */
+        border-radius: 20px; /* Adiciona cantos arredondados para melhor estética */
+    }
+
+    .middle a.btn {
+        width: 80%; /* Ajusta a largura do botão */
+        margin: 1rem auto; /* Centraliza */
+    }
+}
+
+/* Para celulares menores que 480px */
+@media screen and (max-width: 480px) {
+    .middle-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .middle-text h4 {
+        font-size: 0.9rem;
+    }
+
+    .middle-image img {
+        max-width: 300px;
+    }
+
+    .middle a.btn {
+        width: 100%; /* Faz o botão ocupar toda a largura */
+    }
+}
+
+/* Ajuste da seção Especialidades para tablets e telas menores */
+@media screen and (max-width: 1024px) {
+    .specialties-container {
+        flex-direction: column; /* Empilhar os cards */
+        align-items: center; /* Centralizar */
+        gap: 2rem; /* Adiciona espaçamento entre os cards */
+    }
+
+    .specialties-box {
+        width: 90%; /* Ajusta a largura dos cards */
+        max-width: 350px; /* Evita que fiquem muito grandes */
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .specialties h3 {
+        margin-top: 1.5rem;
+    }
+
+    .specialties-box h2 {
+        font-size: 1.5rem; /* Reduz tamanho do título */
+        color: black;
+    }
+    
+
+    .specialties-box h4 {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .specialties-icon {
+        position: relative;
+        top: -2rem;
+        left: auto;
+        transform: translateX(0);
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+/* Ajuste da altura dos boxes das especialidades para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .specialties-box {
+        height: auto !important; /* Ajusta automaticamente ao tamanho do texto */
+        min-height: unset; /* Remove altura mínima */
+        padding: 1.5rem; /* Ajusta o padding */
+    }
+
+    .specialties-container {
+        gap: 1.5rem; /* Ajusta espaçamento entre os boxes */
+    }
+}
+
+/* Para celulares menores que 480px */
+@media screen and (max-width: 480px) {
+    .specialties-box {
+        width: 90%; /* Mantém um tamanho confortável */
+        padding: 1rem;
+    }
+}
+
+/* Ajuste para celulares pequenos (até 480px) */
+@media screen and (max-width: 480px) {
+    .specialties-box {
+        width: 100%; /* Ocupa toda a largura */
+        padding: 1.5rem;
+    }
+
+    .specialties-box h2 {
+        font-size: 1.3rem;
+    }
+
+    .specialties-box h4 {
+        font-size: 0.9rem;
+    }
+
+    .specialties-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+
+/* Ajuste da seção "Sobre" para telas menores */
+@media screen and (max-width: 1024px) {
+    .about {
+        height: auto; /* Permite que a altura se ajuste conforme o conteúdo */
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-bg {
+        display: block; /* Garante que a imagem continue aparecendo */
+    }
+
+    .about-overlay {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+        background-color: rgba(0, 0, 0, 0.4); /* Ajusta a opacidade */
+    }
+
+    .about-content {
+        max-width: 90%;
+        text-align: center; /* Centraliza o conteúdo */
+        color: white;
+    }
+
+    .about-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-content h4 {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+}
+
+/* Ajuste para celulares pequenos (até 480px) */
+@media screen and (max-width: 480px) {
+    .about-content {
+        max-width: 95%;
+        padding: 1rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-content h4 {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Ajuste da navegação e contato para telas menores */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        align-items: flex-start; /* Alinha toda a seção à esquerda */
+        text-align: left;
+        width: 90%;
+        margin-left: 1rem; /* Move um pouco mais para a esquerda */
+    }
+
+    .footer-nav, .footer-contact {
+        width: 100%;
+        max-width: 400px;
+        margin-left: 1rem; /* Move mais para a esquerda */
+    }
+
+    .footer-contact p {
+        justify-content: flex-start;
+    }
+
+    .footer-contact p strong {
+        display: inline-block;
+    }
+
+    /* Ajuste do formulário */
+    .footer-form {
+        width: 90%;
+        max-width: 400px;
+        margin-left: 1rem;
+        text-align: left;
+    }
+}
+
+/* Ajustes para telas menores que 480px */
+@media screen and (max-width: 480px) {
+    .footer-container {
+        width: 95%;
+        margin-left: 0.5rem;
+    }
+
+    .footer-nav, .footer-contact, .footer-form {
+        width: 95%;
+        margin-left: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .background-container {
+        height: 80vh; /* Aumenta o fundo verde */
+    }
+}

@@ -1,0 +1,650 @@
+/* Importação da fonte utilizada (Poppins) diretamente do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset básico: Remove margens padrão, define box-model e fonte padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* Estilização da Logo - Ajuste 'margin-left' para mover horizontalmente */
+.logo {
+    width: 13rem !important; /* Ajuste conforme necessário */
+    height: auto !important; /* Mantém a altura proporcional */
+    object-fit: contain;
+    margin-left: -2rem;
+}
+
+
+/* Scroll suave ao navegar por links internos e distância superior ao scroll */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4.500rem;
+}
+
+/* Destaque na função de smooth */
+/* Efeito de esmaecimento temporário ao clicar no menu */
+.fade-highlight {
+    animation: fadeEffect 1.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    0% {
+        opacity: 0.8; /* Esmaece um pouco */
+    }
+    100% {
+        opacity: 1; /* Volta ao normal */
+    }
+}
+
+/* Container com imagem de fundo na seção inicial da página */
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background-image: url('../img/back2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+/* Container principal para estruturar o layout */
+.container {
+    flex: 1;
+}
+
+/* Cabeçalho fixo na parte superior da página */
+header {   
+    background-color: #ffffff;
+    padding: 1rem 6.25rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+/* Container interno do cabeçalho para organizar conteúdo horizontalmente */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Navegação principal centralizada horizontalmente */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Mantém alinhado à direita */
+    padding-right: 19.4%; /* Usa porcentagem para melhor adaptação */
+}
+
+
+/* Estilização da lista da navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(7, 7, 7);
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+
+/* Efeito visual para links ao passar o mouse ou selecionar via teclado (acessibilidade) */
+/* Remove qualquer borda preta ao clicar ou focar */
+.nav-menu li a:focus,
+.nav-menu li a:active {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Adiciona um efeito de sublinhado suave ao passar o mouse e ao clicar */
+.nav-menu li a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Criando um sublinhado elegante que aparece ao passar o mouse */
+.nav-menu li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: #5c533b; /* Marrom igual aos ícones */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* Expande o sublinhado ao passar o mouse */
+.nav-menu li a:hover::after,
+.nav-menu li a.active::after {
+    width: 100%;
+    left: 0;
+}
+
+
+/* Botão "Área do Cliente" */
+.btn-cliente {
+    background-color: #5c533b;
+    padding: 0.625rem 1rem;
+    border-radius: 0.3125rem;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-cliente:hover {
+    background-color: #b3b2b0;
+}
+
+
+/* Estilização do conteúdo principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    text-align: center;
+}
+
+/* Container para o conteúdo inicial - texto introdutório */
+.content {
+    max-width: 72rem; /* Largura máxima para garantir boa leitura */
+    width: 80%;
+    text-align: left;
+    margin: 7.5rem auto 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Cor do título principal da introdução (H3) */
+.content h3 {
+    color: #d6baa2 !important;
+    font-weight: normal;
+}
+
+/* Cor do subtítulo da introdução (H4) */
+.content h4 {
+    color: #ffffff !important;
+    font-weight: normal;
+}
+
+/* Títulos Principais: ajuste tamanhos e cores conforme necessidade do site */
+h1 {
+    font-size: 2.8125rem;
+    color: #ffffff;
+    margin: 0.625rem 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.625rem;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 0.9375rem;
+    margin-bottom: 0.625rem;
+    font-weight: normal;
+}
+
+/* Container para botões: ajusta espaçamento e comportamento responsivo */
+.buttons {
+    margin-top: 1.875rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+}
+
+/* Estilização dos botões gerais do site */
+.btn {
+    text-decoration: none;
+    padding: 0.875rem 0;
+    width: 16.875rem;
+    border-radius: 0.9375rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #5c533b;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Efeito ao passar o mouse sobre os botões */
+.btn:hover {
+    background-color: #b3b2b0;
+    transform: scale(1.05);
+}
+
+/* Seção "Serviços": estiliza a área que apresenta os serviços oferecidos */
+.services {
+    width: 80%;
+    max-width: 68.75rem;
+    margin: 0.625rem auto;
+    background-color: #fff;
+    border-radius: 0.9375rem;
+    padding: 0.625rem;
+    text-align: center;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos específicos para a seção serviços */
+.services h2 {
+    color: black;
+    font-weight: bold;
+    font-size: 2.1875rem;
+}
+
+.services h3 {
+    color: #d6baa2;
+    font-weight: normal;
+}
+
+/* Containers individuais de cada serviço oferecido */
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.25rem;
+    margin-top: 0.625rem;
+}
+
+.service-box {
+    width: 50%;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    text-align: center;
+}
+
+/* Ícones dos serviços: ajuste visual via filtro */
+.service-icon img {
+    font-size: 3.125rem;
+    margin-bottom: 0.9375rem;
+    width: 4.375rem;
+    height: auto;
+    filter: invert(29%) sepia(80%) saturate(200%) hue-rotate(10deg) brightness(140%) contrast(84%);
+}
+
+/* Seção central do site com destaque para conteúdo específico */
+.middle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6.25rem 0;
+    background-color: #ffffff;
+}
+
+.middle-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 68.75rem;
+    width: 80%;
+    gap: 2.5rem;
+}
+
+/* Conteúdo textual na seção central */
+.middle-text {
+    flex: 1;
+    max-width: 34.375rem;
+    color: #333;
+}
+
+.middle-text h2 {
+    font-size: 1.75rem;
+    color: #000000;
+    margin-bottom: 0.9375rem;
+}
+
+.middle-text p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 0.9375rem;
+}
+
+.middle-text strong {
+    color: #000000;
+}
+
+/* Imagem da seção central com bordas arredondadas e sombra para destaque visual */
+.middle-image img {
+    width: 100%;
+    max-width: 31.25rem;
+    border-radius: 6.25rem 1.25rem 6.25rem 1.25rem;
+    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* Seção de Especialidades: fundo, espaçamento e alinhamento geral da seção */
+.specialties {
+    width: 100%;
+    max-width: none;
+    margin: 3.125rem 0;
+    background-color: #0f2b29; /* Altera aqui a cor de fundo da seção especialidades */
+    border-radius: 0;
+    padding: 3.125rem 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cabeçalho das especialidades: título e alinhamento */
+.specialties-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.875rem;
+}
+
+/* Container principal das especialidades (flexível para conteúdo interno) */
+.specialties-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+/* Caixas individuais das especialidades: estilização individual dos cards */
+.specialties-box {
+    background-color: #fff;
+    color: #333;
+    width: 100%;
+    max-width: 21.875rem;
+    padding: 1.875rem;
+    border-radius: 1.25rem;
+    text-align: center;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.875rem;
+    position: relative;
+    margin-top: 3.125rem;
+    min-height: 36.875rem;
+    height: auto;
+}
+
+.specialties h2 {
+    margin-top: 1.5rem;
+    color: white;
+}
+
+.specialties h3 {
+    margin-top: 1.5rem;
+}
+
+
+/* Ícones posicionados acima das caixas de especialidades */
+.specialties-box .specialties-icon {
+    background-color: #d6baa2; /* Cor de fundo do círculo do ícone */
+    width: 3.75rem;
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: -1.875rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.875rem;
+}
+
+.specialties-icon img {
+    width: 40px; /* Ajuste o tamanho do ícone para caber dentro do círculo */
+    height: auto;
+}
+
+/* Seção Sobre: Imagem de fundo e texto explicativo da empresa */
+.about {
+    margin-top: -3.125rem;
+    width: 100%;
+    height: 25rem;
+    background-image: url('../img/about.jpg'); /* Altere aqui a imagem de fundo da seção Sobre */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Imagem adicional de fundo dentro do HTML (opcional se usar apenas CSS background-image) */
+.about-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+/* Sobreposição escura para melhorar a legibilidade do texto */
+.about-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Ajuste a transparência aqui */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Conteúdo textual da seção Sobre */
+.about-content {
+    max-width: 71.875rem;
+    text-align: left;
+    color: #fff;
+    padding: 1.25rem;
+    position: relative;
+    z-index: 1;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 0.9375rem;
+    font-weight: bold;
+}
+
+.about-content p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 0.9375rem;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+}
+.whatsapp-float img {
+    width: 100%;
+}
+
+
+/* Estilização Geral do Rodapé */
+.footer {
+    background-color: #0f2b29; /* Altera a cor de fundo do rodapé aqui */
+    color: white;
+    padding: 3.125rem 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Container principal que organiza elementos internos do rodapé */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 81.25rem;
+    margin: 0 auto;
+    padding: 1.25rem;
+    gap: 1.25rem;
+}
+
+/* Navegação no rodapé - links de acesso rápido */
+.footer-nav {
+    flex: none;
+    min-width: auto;
+    text-align: left;
+}
+
+/* Informações de contato exibidas no rodapé */
+.footer-contact {
+    flex: none;
+    min-width: auto;
+    text-align: left;
+}
+
+/* Estilização da lista de navegação no rodapé */
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    margin: 0.625rem 0;
+}
+
+/* Links da navegação do rodapé */
+.footer-nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-nav ul li a:hover {
+    color: #000000; /* Cor ao passar o mouse sobre links */
+}
+
+/* Informações de contato (endereço, telefone, email, etc.) */
+.footer-contact p {
+    margin: 0.3125rem 0;
+    color: white;
+}
+
+.footer-contact a {
+    color: white !important; /* Força a cor branca */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: normal; /* Deixa o link mais destacado */
+}
+
+.footer-contact a:hover {
+    color: #ccc; /* Cor mais clara ao passar o mouse */
+}
+
+
+.icon-footer {
+    width: 18px; /* Defina um tamanho similar ao do emoji */
+    height: auto;
+    vertical-align: middle; /* Alinha o ícone com o texto */
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+}
+
+/* Formulário de contato dentro do rodapé */
+.footer-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.footer-form input,
+.footer-form textarea {
+    width: 100%;
+    padding: 0.625rem;
+    border: none;
+    border-radius: 0.3125rem;
+    font-size: 0.875rem;
+}
+
+/* Campo para mensagens (textarea) no formulário */
+.footer-form textarea {
+    height: 6.25rem;
+    resize: none;
+}
+
+/* Botão de envio do formulário no rodapé */
+.footer-form .btn {
+    background-color: #5c533b; /* Cor padrão do botão */
+    color: white;
+    width: 100%;
+    padding: 0.625rem;
+    border: none;
+    border-radius: 0.3125rem;
+    font-size: 0.9375rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.footer-form .btn:hover {
+    background-color: #b3b2b0; /* Cor do botão ao passar o mouse */
+}
+
+/* Área inferior do rodapé para créditos e informações adicionais */
+.footer-bottom {
+    background-color: #111; /* Cor de fundo da parte inferior do rodapé */
+    padding: 0.625rem;
+    margin-top: 1.25rem;
+}
+
+.testimonials {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: #f4f4f4;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-box {
+    max-width: 300px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
