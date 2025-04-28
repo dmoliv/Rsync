@@ -181,7 +181,7 @@ main {
 
 /* Cor do título principal da introdução (H3) */
 .content h3 {
-    color: #d6baa2 !important;
+    color: #ffffff; !important;
     font-weight: normal;
 }
 
@@ -233,7 +233,7 @@ h4 {
     font-size: 1rem;
     font-weight: bold;
     color: white;
-    background-color: #5c533b;
+    background-color: #268819;
     transition: background-color 0.3s ease, transform 0.2s ease;
     text-align: center;
     display: inline-block;
@@ -265,7 +265,7 @@ h4 {
 }
 
 .services h3 {
-    color: #d6baa2;
+    color: #268819;
     font-weight: normal;
 }
 
@@ -290,7 +290,7 @@ h4 {
     margin-bottom: 0.9375rem;
     width: 4.375rem;
     height: auto;
-    filter: invert(29%) sepia(80%) saturate(200%) hue-rotate(10deg) brightness(140%) contrast(84%);
+    filter: invert(24%) sepia(92%) saturate(800%) hue-rotate(85deg) brightness(85%) contrast(95%);
 }
 
 /* Seção central do site com destaque para conteúdo específico */
@@ -407,7 +407,7 @@ h4 {
 
 /* Ícones posicionados acima das caixas de especialidades */
 .specialties-box .specialties-icon {
-    background-color: #d6baa2; /* Cor de fundo do círculo do ícone */
+    background-color: #268819; /* Cor de fundo do círculo do ícone */
     width: 3.75rem;
     height: 3.75rem;
     display: flex;
@@ -606,7 +606,7 @@ h4 {
 
 /* Botão de envio do formulário no rodapé */
 .footer-form .btn {
-    background-color: #5c533b; /* Cor padrão do botão */
+    background-color: #268819; /* Cor padrão do botão */
     color: white;
     width: 100%;
     padding: 0.625rem;
