@@ -15,7 +15,7 @@
     width: 13rem !important; /* Ajuste conforme necessário */
     height: auto !important; /* Mantém a altura proporcional */
     object-fit: contain;
-    margin-left: -2rem;
+    transform: translateX(20px); /* Move o logo 20px para direita */
 }
 
 
