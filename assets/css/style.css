@@ -181,7 +181,7 @@ main {
 
 /* Cor do título principal da introdução (H3) */
 .content h3 {
-    color: #ffffff; !important;
+    color: #ffffff !important;
     font-weight: normal;
 }
 
