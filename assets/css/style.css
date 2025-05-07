@@ -287,7 +287,7 @@ h4 {
 /* Ícones dos serviços: ajuste visual via filtro */
 .service-icon img {
     font-size: 3.125rem;
-    margin-bottom: 0.9375rem;
+   
     width: 4.375rem;
     height: auto;
     filter: invert(24%) sepia(92%) saturate(800%) hue-rotate(85deg) brightness(85%) contrast(95%);
@@ -351,7 +351,7 @@ h4 {
     margin: 3.125rem 0;
     background-color: #0f2b29; /* Altera aqui a cor de fundo da seção especialidades */
     border-radius: 0;
-    padding: 3.125rem 0;
+    padding: 3.125rem 0 6rem;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -391,7 +391,7 @@ h4 {
     gap: 1.875rem;
     position: relative;
     margin-top: 3.125rem;
-    min-height: 36.875rem;
+    min-height: 18.875rem;
     height: auto;
 }
 
