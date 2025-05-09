@@ -16,12 +16,14 @@ header {
 }
 
 
+
 /* Logo */
 .logo {
-    width: 10rem !important;
+    width: 9rem;
     height: auto;
-    margin-left: -2rem;
+    margin-left: 0.5rem;
 }
+
 
 /* Ocultar menu no mobile inicialmente */
 .nav-menu {
@@ -71,6 +73,12 @@ header {
         text-align: center;
         padding: 0.75rem 0;
     }
+
+    .service-box h3 {
+        margin-top: 1rem; /* Espaço adequado entre o ícone e o título */
+        font-size: 1.2rem;
+    }
+
 }
 
 
@@ -191,6 +199,43 @@ header {
     .services h4 {
         font-size: 1rem;
         margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 1024px) {
+    .content,
+    .service-container,
+    .specialties-container,
+    .middle-content {
+        width: 90%;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+
+    header {
+        padding: 1rem 2rem;
+    }
+
+    .logo {
+        width: 10rem;
+        transform: translateX(10px);
+    }
+
+    nav {
+        padding-right: 6rem; /* Empurra o menu mais pra direita */
+    }
+
+    .nav-menu {
+        justify-content: flex-end;
+        gap: 2.5rem; /* Se quiser mais espaço entre os botões */
+    }
+
+    .specialties-container {
+        align-items: stretch;
+    }
+
+    .specialties-box {
+        min-height: 34rem; /* altura unificada apenas nesta resolução */
     }
 }
 
@@ -423,6 +468,8 @@ header {
     }
 }
 
+
+
 /* Ajustes para telas menores que 480px */
 @media screen and (max-width: 480px) {
     .footer-container {
@@ -440,4 +487,24 @@ header {
     .background-container {
         height: 80vh; /* Aumenta o fundo verde */
     }
+}
+
+
+/* Estilização para alinhar corretamente ícone + título */
+.service-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.service-icon img {
+  width: 3rem;
+  height: auto;
+}
+
+.service-box h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.4;
 }

@@ -286,10 +286,9 @@ h4 {
 
 /* Ícones dos serviços: ajuste visual via filtro */
 .service-icon img {
-    font-size: 3.125rem;
-   
-    width: 4.375rem;
+    max-width: 3rem;
     height: auto;
+    margin-bottom: 0.5rem;
     filter: invert(24%) sepia(92%) saturate(800%) hue-rotate(85deg) brightness(85%) contrast(95%);
 }
 
@@ -369,9 +368,8 @@ h4 {
 /* Container principal das especialidades (flexível para conteúdo interno) */
 .specialties-container {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch; /* <<< ESTICA os boxes para mesma altura */
     gap: 1.25rem;
 }
 
@@ -388,11 +386,11 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.875rem;
+    gap: 0.875rem;
     position: relative;
     margin-top: 3.125rem;
-    min-height: 18.875rem;
     height: auto;
+    min-height: unset;
 }
 
 .specialties h2 {
@@ -419,6 +417,14 @@ h4 {
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.875rem;
+}
+
+.specialties-box h3 {
+    min-height: 3rem; /* ou 2.5rem conforme fonte usada */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .specialties-icon img {
